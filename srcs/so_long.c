@@ -6,7 +6,7 @@
 /*   By: sifreita <sifreita@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 19:29:21 by sifreita          #+#    #+#             */
-/*   Updated: 2022/06/12 03:06:40 by sifreita         ###   ########.fr       */
+/*   Updated: 2022/06/12 03:22:14 by sifreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@
 // 	*(unsigned int *) dst = color;
 // }
 
-// int	exit_tutorial(t_win *window)
-// {
-//         if (window)
-//                 mlx_destroy_window (window->mlx_ptr, window->win_ptr);
-//         exit(EXIT_SUCCESS);
-// }
+int	close_mlx(t_main *main)
+{
+        if (main)
+                mlx_destroy_window (main->win.mlx_ptr, main->win.win_ptr);
+        exit(EXIT_SUCCESS);
+}
 
 // int	read_keys(int key_pressed, void *param)
 // {
@@ -136,9 +136,29 @@
 // 	return (0);
 // }
 
+// t_main	new_image(int h, int w, t_win window)
+// {
+// 	t_img	image;
+
+// 	image.win = window;
+// 	image.img_ptr = mlx_new_image(window.mlx_ptr, w, h);
+// 	image.addr = mlx_get_data_addr(image.img_ptr, &(image.bpp), &(image.line_len), &(image.endian));
+// 	image.w = w;
+// 	image.h = h;
+// 	return (image);
+// }
+
+// t_win new_program(int w, int h, char *str)
+// {
+// 	void	*mlx_ptr;
+
+// 	mlx_ptr = mlx_init();
+// 	return ((t_win) {mlx_ptr, mlx_new_window(mlx_ptr, w, h, str), w, h});
+// }
+
 int main(void)
 {
 	t_main	main;
 
-	main = new_program()
+	main =;
 }

@@ -8,7 +8,7 @@ ${NAME}: ${SRCS}
 	@clear
 	@cat MakeArt/compiling.txt
 	@sleep 1
-	@gcc ${SRCS} ${FLAGS} -Lmlx -lmlx -framework OpenGL -framework AppKit -I${INCS} -o ${NAME}
+	@gcc ${SRCS} includes/libft.a ${FLAGS} -Lmlx -lmlx -framework OpenGL -framework AppKit -I${INCS} -o ${NAME}
 	@clear
 	@cat MakeArt/compiled.txt
 	@sleep 0.5

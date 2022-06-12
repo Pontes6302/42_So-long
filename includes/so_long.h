@@ -6,7 +6,7 @@
 /*   By: sifreita <sifreita@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 19:29:26 by sifreita          #+#    #+#             */
-/*   Updated: 2022/06/12 03:06:39 by sifreita         ###   ########.fr       */
+/*   Updated: 2022/06/12 03:34:02 by sifreita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <mlx.h>
 #include <stdlib.h>
 #include "structs.h"
+#include "libft.h"
 
 # define ESC 53
 # define ENTER 36
