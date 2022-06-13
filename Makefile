@@ -6,7 +6,7 @@
 #    By: sifreita <sifreita@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 07:03:34 by sifreita          #+#    #+#              #
-#    Updated: 2022/06/13 07:03:55 by sifreita         ###   ########.fr        #
+#    Updated: 2022/06/13 07:07:25 by sifreita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ ${NAME}: ${SRCS}
 	@clear
 	@cat MakeArt/compiling.txt
 	@sleep 1
-	@gcc ${SRCS} ${LIBRARIES} ${FLAGS} -Lmlx -lmlx -framework OpenGL -framework AppKit -I${INCS} -o ${NAME}
+	@gcc ${SRCS} ${LIBRARIES} ${FLAGS} -lmlx -framework OpenGL -framework AppKit -I${INCS} -o ${NAME}
 	@clear
 	@cat MakeArt/compiled.txt
 	@sleep 0.5
