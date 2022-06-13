@@ -1,6 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sifreita <sifreita@42.fr>                  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/06/13 07:03:34 by sifreita          #+#    #+#              #
+#    Updated: 2022/06/13 07:03:55 by sifreita         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS = ${wildcard srcs/*.c}
 TEXT = /MakeArt/${wildcard *.txt}
-FLAGS = 
+LIBRARIES = ${wildcard libraries/*.a}
+FLAGS = -Wall -Werror -Wextra
 INCS = includes/
 NAME = so_long
 
@@ -8,7 +21,7 @@ ${NAME}: ${SRCS}
 	@clear
 	@cat MakeArt/compiling.txt
 	@sleep 1
-	@gcc ${SRCS} includes/libft.a ${FLAGS} -Lmlx -lmlx -framework OpenGL -framework AppKit -I${INCS} -o ${NAME}
+	@gcc ${SRCS} ${LIBRARIES} ${FLAGS} -Lmlx -lmlx -framework OpenGL -framework AppKit -I${INCS} -o ${NAME}
 	@clear
 	@cat MakeArt/compiled.txt
 	@sleep 0.5
